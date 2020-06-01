@@ -16,14 +16,15 @@ class Secant():
   @approximate
   def checkResidual(residual):
     if (f_x(x[i+2]) < self.residual):
-      return True
-    else:
-      return False
+      # この書き方で動くのかは不明
+      break
     
   def changeFormat(self,value):
+    # ほかに特に使いたいformatが今のところないのでいい書き方が思いつかない
     if (self.format == '.12e'):
       return '{.12e}'.format(value)
   def f_x(self,xnum):
+    # 任意の関数を受け取って計算できるようにしたい（evalとかでできそう？）
     return (math.e)**(xnum)-(5)*(xnum)
   
     
