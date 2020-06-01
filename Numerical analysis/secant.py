@@ -5,7 +5,7 @@ class Secant():
   getcontext().prec = 12
   def __init__(self):
   
-  def approximate(self,initial_x,second_x,*max_n):
+  def approximate(self,initial_x,second_x,func,*max_n):
     def wrapper(*args):
       x = [initial_x,second_x]
       for i in range(max_n-1):
